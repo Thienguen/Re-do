@@ -1,7 +1,14 @@
 // Java implementation of the approach
 class palindrome2
 {
-    
+    public static void main (String[] args)
+    {
+        System.out.println("Oy, is it working?");
+        
+        int d = 12;
+        printPalindromes(d);
+    }
+
     // Function to return the
     // reverse of num
     static int reverse(int num)
@@ -19,7 +26,6 @@ class palindrome2
     // if num is palindrome
     static boolean isPalindrome(int num)
     {
-    
         // If the number is equal to the
         // reverse of it then it
         // is a palindrome
@@ -33,30 +39,23 @@ class palindrome2
     // d-digit palindrome numbers
     static void printPalindromes(int d)
     {
-        if (d <= 0)
-            return;
+        if (d <= 0) return;
     
         // Smallest and the largest d-digit numbers
-        int smallest = (int)Math.pow(10, d - 1);
-        int largest = (int)Math.pow(10, d) - 1;
-    
+        boolean valid = false;
         // Starting from the smallest d-digit
         // number till the largest
-        for (int i = smallest; i <= largest; i++)
+        while (!valid)
         {
-
             // If the current number
             // is palindrome
-            if (isPalindrome(i))
-                System.out.print(i + " ");
+            if (isPalindrome(d))
+            { 
+                System.out.print(d + " ");
+                valid = true;
+            }
+            d = d + reverse(d);
         }
     }
     
-    // Driver code
-    public static void main (String[] args)
-    {
-        int d = 42;
-    
-        printPalindromes(d);
-    }
 }
