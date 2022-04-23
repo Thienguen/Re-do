@@ -1,4 +1,4 @@
-# Re-do for others, and for speed
+# Re-do for others, and for speed, now it's leet code
 
 ## This was a practice to some simple algorithm in my Math class
 
