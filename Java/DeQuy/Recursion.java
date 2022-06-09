@@ -49,15 +49,12 @@ public class Recursion {
     }
 
     // cau 1
-    public static int time2Recursion(int times) {
-        int result;
-
-        if (times == 0) {
-            result = 1;
+    public static int time2Recursion(int n) {
+        if (n < 1) {
+            return 1;
         } else {
-            result = times * time2Recursion(times - 1);
+            return 2 * time2Recursion(n - 1);
         }
-        return result;
     }
 
     // cau 2
